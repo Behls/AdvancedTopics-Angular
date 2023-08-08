@@ -11,14 +11,14 @@ npm install
 
 ## Resources - References for external resources (Accrediting Authors)
 
-- [Movie Logo]('https://www.flaticon.com/free-icon/clapperboard_2184561?term=movie&page=1&position=23&origin=search&related_id=2184561')
+- [Movie Logo](https://www.flaticon.com/free-icon/clapperboard_2184561?term=movie&page=1&position=23&origin=search&related_id=2184561)
 
 ## Data Storage 
 All data is stored and fetched using Firebase. Users are able to sign up with their `email` and `password`. Data is stored and fetched in realtime, no need for refreshing of any webpages.
 
 ## Movie DB API
 An external API tool was used to retrieve current and historical movie data, which is then displayed on various pages throughout the application. Linked below is documentation, which encludes all the endpoints, additional help for specific languages including getting started with the API, as well as a live tool for API call examples. 
-- [MovieDB API Docs]('https://developer.themoviedb.org/reference/intro/getting-started')
+- [MovieDB API Docs](https://developer.themoviedb.org/reference/intro/getting-started)
  
 
 # Angular CLI Generated Information
