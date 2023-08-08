@@ -1,14 +1,6 @@
 # Assignment 2 - Advanced Topics - Angular
 This is an submission for the Advanced Topics Angular Module at Perth UHI. The goal was to implement various concepts learned throughout the module, including authentication, user login and subcriptions, fetching and manipulating data from various endpoints using RJX, as well as storing and retreiving data from a realtime database. 
 
-## Setup
-All packages used in this project are stored in the `package.json` file, to install them use the following command:
-
-```
-npm install
-
-``` 
-
 ## Resources - References for external resources (Accrediting Authors)
 
 - [Movie Logo](https://www.flaticon.com/free-icon/clapperboard_2184561?term=movie&page=1&position=23&origin=search&related_id=2184561)
