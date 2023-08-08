@@ -1,0 +1,20 @@
+<div class="provider-container" [@fade]="">
+        <div class="overlay">
+            <span class="provider-id"></span>
+            <span class="provider-name">{{ provider.provider_name }}</span>
+            <button mat-fab color="warn" *ngIf="authenticated && !isFavourite" (click)="onAddFavourite(provider)" class="fav-button" [@text]="">
+                <mat-icon>favorite_outline</mat-icon>
+            </button>
+            <button mat-fab color="warn" *ngIf="authenticated && isFavourite" (click)="onRemoveFavourite(provider)" class="fav-button" [@text]="">
+                <mat-icon>favorite</mat-icon>
+            </button>
+        </div>
+        
+        <img [src]="'http://image.tmdb.org/t/p/w500/'+provider.logo_path" [alt]="provider.provider_name">
+
+    </div>
+
+<ng-template #loading>
+    <app-loading-spinner></app-loading-spinner>
+</ng-template>
+

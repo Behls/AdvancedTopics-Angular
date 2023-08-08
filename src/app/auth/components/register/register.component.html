@@ -1,0 +1,21 @@
+<div class="auth-container">
+    <mat-card>
+        <h1>Register Card</h1>
+        <form action="" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <input matInput type="email" autocomplete="off" placeholder="Email Address" formControlName="email">
+                <mat-error>{{getEmailError()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="password" autocomplete="off" placeholder="Password" formControlName="password">
+                <mat-error>{{getPasswordError()}}</mat-error>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" [disabled]="registerForm.invalid">Register</button>
+            <p>Alread have an account? Login <a routerLink="../login">Here</a></p>
+            <app-loading-spinner *ngIf="loading"></app-loading-spinner>
+            <mat-error *ngIf="error">{{ error }}</mat-error>
+        </form>
+    </mat-card>
+</div>

@@ -1,0 +1,50 @@
+<ng-container *ngIf="movie$ | async as movie; else loading">
+<mat-card>
+    <div class="close-action">
+        <button mat-icon-button (click)="onBack()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <div class="movie-details">
+        <div class="movie-image">
+            <div class="image-container">
+                <img [src]="'http://image.tmdb.org/t/p/w500/'+movie.poster_path" [alt]="movie.title">
+                <div class="overlay">
+                    <h1>{{ movie.title }}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="movie-information">
+            <h2>Movie Details</h2>
+            <ul>
+                <li *ngIf="movie.tagline"><b>Tagline: </b>{{ movie.tagline }}</li>
+                <li *ngIf="movie.overview"><b>Overview: </b>{{ movie.overview }}</li>
+                <li *ngIf="movie.adult"><b>Age Rating : </b>Adults only.</li>
+                <li *ngIf="movie.release_date"><b>Release Date </b>{{ movie.release_date }}</li>
+                <li *ngIf="movie.runtime"><b>Movie Runtime:  </b>{{ movie.runtime }}mins</li>
+
+
+                    <mat-chip-listbox>
+                    <li *ngIf="movie.genres"><b>Genres:</b>
+                        <mat-chip *ngFor="let genre of movie.genres" color="primary" highlighted>
+                            {{ genre.name }}
+                        </mat-chip>
+                    </li>
+                        
+                    <li *ngIf="movie.production_companies"><b>Production Companies:</b>
+                    <mat-chip *ngFor="let prod of movie.production_companies" color="accent" highlighted>
+                            {{ prod.name }}
+                    </mat-chip>
+                    </li>
+
+                </mat-chip-listbox>
+
+
+            </ul>
+        </div>
+    </div>
+</mat-card>
+</ng-container>
+<ng-template #loading>
+    <app-loading-spinner></app-loading-spinner>
+</ng-template>

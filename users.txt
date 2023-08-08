@@ -1,0 +1,23 @@
+------- users details for testing -------
+
+user 1: 
+
+email: test1@test.com
+password: pass123
+
+user 2: 
+email: user@test.com
+password: password123
+
+
+------ rules ------
+{
+  "rules": {
+			"providers":{
+        "$uid":{
+          ".write": "$uid === auth.uid",
+          ".read": "$uid === auth.uid"
+        }
+      }
+  }
+}

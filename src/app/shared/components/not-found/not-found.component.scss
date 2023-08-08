@@ -1,0 +1,22 @@
+.message-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+}
+
+mat-card{
+    width: 50%;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1{
+    text-transform: lowercase;
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin: 2rem  0;
+    font-style: italic;
+}

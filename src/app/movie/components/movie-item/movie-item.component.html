@@ -1,0 +1,22 @@
+<div class="movie-container" *ngIf="isTrending" [@fade]="">
+    <div class="overlay">
+        <span class="movie-title">{{ movie.title }}</span>
+    </div>
+    <img [src]="'http://image.tmdb.org/t/p/w500/'+movie.poster_path" [alt]="movie.title">
+</div>
+
+<div class="movie-container" *ngIf="!isTrending" (click)="onViewMovie()" [@fade]="">
+    <div class="overlay">
+        <span class="movie-title">{{ movie.title }}</span>
+    </div>
+    <div *ngIf="movie.poster_path">
+        <img [src]="'http://image.tmdb.org/t/p/w500/'+movie.poster_path" [alt]="movie.title">     
+    </div>
+
+    <div class="img" *ngIf="!movie.poster_path">
+        <span class="bg"></span>   
+    </div>
+
+</div>
+
+

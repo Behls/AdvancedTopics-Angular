@@ -1,0 +1,17 @@
+<h2 class="search-title" [@text]="">Search Movie</h2>
+
+<form [formGroup]="searchform" (ngSubmit)="onSubmit()">
+
+    <mat-form-field>
+        <mat-label>Search for Movie</mat-label>
+        <input type="text" matInput placeholder="movie title" autocomplete="off" formControlName="title">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [disabled]="searchform.invalid">Search</button>
+
+</form>
+<h2 *ngIf="isTrending" class="trending-title" [@text]="">Trending Movies</h2>
+<app-movie-list *ngIf="!loading && isTrending" [movies]="movies" [isTrending]="isTrending" [@fade]=""></app-movie-list>
+<router-outlet></router-outlet>
+
+
